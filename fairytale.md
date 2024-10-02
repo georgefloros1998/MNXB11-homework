@@ -1,7 +1,7 @@
 #MNXB11 fairytale
 
 Once upon a time,
-there was a **lowres** ascii art of _ATLAS_
+there was a _lowres_ ascii art of **ATLAS**
 
 ```
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
