@@ -9,7 +9,7 @@ int checksum (std::string word) {
   //  i += word[j];
   //}
   //range-based "for" loop instead of the above "for" loop
-  for (char c : word) {
+  for (auto &c : word) {
     i += c;    
   }
   return i;
