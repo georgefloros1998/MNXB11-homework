@@ -151,7 +151,8 @@ FILTER_FILTERFILENAME_ONLYNEGATIVE="onlynegative_$FILTER_FILTEREDFILENAME"
 log "Filtering on only negative temperatures, writing to $FILTER_FILTERFILENAME_ONLYNEGATIVE"
 awk '$3 < 0 {print $0}' $CLEANER_BAREDATAFILENAME > $FILTER_FILTERFILENAME_ONLYNEGATIVE
 
-# Select only measurements done in the first day of the month
-FILTER_FILTERFILENAME_ONLYFIRST="april_$FILTER_FILTEREDFILENAME"
-log "Filtering on only measurements taken in the first day of the month, writing to $CLEANER_FILTERFILENAME_ONLYFIRST"
-grep '-01 ' $CLEANER_BAREDATAFILENAME > $FILTER_FILTERFILENAME_ONLYFIRST
+# Select only measurements done on the first day of each month
+FILTER_FILTERFILENAME_FIRSTDAY="firstday_$FILTER_FILTEREDFILENAME"
+log "Filtering on only measurements taken on the first day of each month, writing to $CLEANER_FILTERFILENAME_FIRSTDAY"
+grep '\-[0-9][0-9]\-01 ' $CLEANER_BAREDATAFILENAME > $FILTER_FILTERFILENAME_ONLYFIRST
+# With the assistance of ChatGPT for the pattern that the filer is looking for
