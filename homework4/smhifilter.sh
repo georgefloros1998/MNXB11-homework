@@ -151,8 +151,8 @@ FILTER_FILTERFILENAME_ONLYNEGATIVE="onlynegative_$FILTER_FILTEREDFILENAME"
 log "Filtering on only negative temperatures, writing to $FILTER_FILTERFILENAME_ONLYNEGATIVE"
 awk '$3 < 0 {print $0}' $CLEANER_BAREDATAFILENAME > $FILTER_FILTERFILENAME_ONLYNEGATIVE
 
-# Select only measurements done on the first day of each month
-FILTER_FILTERFILENAME_FIRSTDAY="firstday_$FILTER_FILTEREDFILENAME"
-log "Filtering on only measurements taken on the first day of each month, writing to $CLEANER_FILTERFILENAME_FIRSTDAY"
-grep '\-[0-9][0-9]\-01 ' $CLEANER_BAREDATAFILENAME > $FILTER_FILTERFILENAME_FIRSTDAY
-# With the assistance of ChatGPT for the pattern that the filter is looking for
+# Select only measurements done in 1998
+FILTER_FILTERFILENAME_ONLY1998="1998_$FILTER_FILTEREDFILENAME"
+log "Filtering on only measurements taken in 1998, writing to $CLEANER_FILTERFILENAME_ONLY1998"
+grep '^1998-' $CLEANER_BAREDATAFILENAME > $FILTER_FILTERFILENAME_ONLY1998
+# With the assistance of ChatGPT for the sympol ^ used in the filter
