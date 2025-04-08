@@ -13,9 +13,12 @@ void write(Int_t nEvents) {
     Double_t px, py, pz;
     // I don't need branches with momentum cordinates
     // They exist as leaves in the "momentum" branch
-    /*tree->Branch("px", &px);
+    // If I wanted them I would have done this
+    /*
+    tree->Branch("px", &px);
     tree->Branch("py", &py);
-    tree->Branch("pz", &pz);*/
+    tree->Branch("pz", &pz);
+    */
     // A branch with your personal object type
     tree->Branch("momentum", &momentum);
     // Create loop for filling the tree with data
