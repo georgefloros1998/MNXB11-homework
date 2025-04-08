@@ -65,6 +65,6 @@ if [[ $COPY_OUTCOME1 != 0 ]] || [[ $COPY_OUTCOME2 != 0 ]]; then
 fi
 
 # T6 Merge the two files into one
-cat "$ORIGINALFILENAME1" "$ORIGINALFILENAME2" > "$MERGED_DATAFILE"
+cat "$ORIGINALFILENAME1" "$ORIGINALFILENAME2" | sort -u > "$MERGED_DATAFILE"
 # Can also use the INPUT_FILE if I don't want the copies
 echo "Files merged successfully into $MERGED_DATAFILE"
